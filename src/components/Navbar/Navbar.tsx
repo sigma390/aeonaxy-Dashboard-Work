@@ -10,7 +10,7 @@ const Navbar = () => {
         <p className='p-2 font-bold text-[#594433] mr-2'>One-time Offer</p>
       </div>
       <div className="mt-3 p-2 mb-3 ml-3 items-center">
-      <p className='text-xl font-bold' >Your Ai storyboarding expires in </p>
+      <p className='text-xl font-bold' >Your Ai Storyboarding Bundle Discount expires in </p>
       
       </div>
       <div className="mt-3 p-2 mb-3  items-center"><Timer/></div>
