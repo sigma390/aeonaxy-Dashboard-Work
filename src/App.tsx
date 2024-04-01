@@ -1,12 +1,18 @@
 
+import { Outlet } from 'react-router-dom'
 import './App.css'
+import Header from './components/Header/Header'
+import Navbar from './components/Navbar/Navbar'
 
 function App() {
 
 
-  return (
+  return  (
     <>
-     <p>hellow</p>
+    <Navbar/>
+    <Header/>
+    <Outlet />
+    
     </>
   )
 }
