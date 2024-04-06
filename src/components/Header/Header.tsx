@@ -4,7 +4,7 @@ import { LuLoader2 } from "react-icons/lu";
 import { BsLightningChargeFill } from "react-icons/bs";
 const Header = () => {
   return (
-    <div className=' flex flex-row justify-between h-24 '>
+    <div className=' flex flex-row justify-between h-24 bg-white '>
         <div className='flex flex-row'>
         <div className="bg-black flex items-center justify-center rounded-full  h-12 w-12 mt-6  ml-6">
             <div className='text-white font-bold text-2xl'>B</div>
