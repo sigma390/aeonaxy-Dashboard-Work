@@ -1,10 +1,10 @@
-import React from 'react'
+import React, { ReactNode } from 'react'
 
 export type ProjectCardProps = {
     image:string,
     name:string,
     id:number,
-    modified: string 
+    modified: string ,
 }
 
 

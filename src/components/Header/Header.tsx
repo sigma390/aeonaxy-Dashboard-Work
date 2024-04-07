@@ -10,7 +10,7 @@ const Header = () => {
             <div className='text-white font-bold text-2xl'>B</div>
         </div>
         <div className="mt-6 p-2 mb-3 ml-3 items-center">
-      <p className='text-3xl font-bold' >Project Dashboard </p>
+      <p className='text-3xl  font-custom' >Project Dashboard </p>
       
       </div>
 

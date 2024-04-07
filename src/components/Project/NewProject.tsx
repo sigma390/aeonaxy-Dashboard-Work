@@ -43,8 +43,8 @@ const NewProject: React.FC<NewProjectProps> = ({ addProject, onClose }) => {
   return (
     <div className="p-4 w-96">
       <div className='flex flex-row justify-between'>
-        <h1 className="text-2xl font-bold mb-4">New StoryBoard</h1>
-        <button  className="text-2xl m-2" onClick={closeIt}><IoIosCloseCircleOutline /></button>
+        <h1 className="text-2xl mb-4 font-custom">New StoryBoard</h1>
+        <button  className="text-2xl mb-3" onClick={closeIt}><IoIosCloseCircleOutline /></button>
       </div>
       
       <form onSubmit={handleSubmit}>
@@ -70,9 +70,10 @@ const NewProject: React.FC<NewProjectProps> = ({ addProject, onClose }) => {
             onChange={(e) => setFrameSize(e.target.value)}
             className="w-full border border-gray-300 rounded-md py-2 px-4 focus:outline-none focus:border-blue-500"
           >
-            <option value="small">Small</option>
-            <option value="medium">Medium</option>
-            <option value="large">Large</option>
+            <option value="small">Landscape (16:9)</option>
+            <option value="medium">Portrait(9:16)</option>
+            <option value="large">Landscape (4:3)</option>
+            <option value="large">Portrait (3:4)</option>
           </select>
         </div>
         <hr />

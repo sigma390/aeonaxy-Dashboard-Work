@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { FaPlus } from 'react-icons/fa';
+import { HiOutlineFolderOpen } from "react-icons/hi";
+import { SlOptionsVertical } from "react-icons/sl";
 import { ProjectCardProps } from './ProjectCard';
 import NewProject from './NewProject';
 import AddProjectSquare from './AddProjectSquare';
@@ -13,10 +15,12 @@ const ListProjects: React.FC<ListProjectsProps> = ({ projects }) => {
   const [allProjects, setAllProjects] = useState<ProjectCardProps[]>(projects);
   // State to manage NewProject visibility
   const [showNewProject, setShowNewProject] = useState(false);
+  const [noStryBoards,setStoryBrds] = useState<number>(0);
 
   // Function to add a new project
   const addProject = (newProject: ProjectCardProps) => {
     setAllProjects([...allProjects, newProject]);
+    setStoryBrds((prevNoStryBoards) => prevNoStryBoards + 1);
     setShowNewProject(false); // Close the NewProject popup after adding the project
   };
 
@@ -31,8 +35,38 @@ const ListProjects: React.FC<ListProjectsProps> = ({ projects }) => {
 
   return (
     <div className='mr-10 ml-10 bg-white mt-10'>
-      <h2 className="text-2xl font-bold mb-4">List of Projects</h2>
-      <div className="flex flex-wrap">
+      {/* <h2 className="text-2xl font-bold mb-4">List of Projects</h2> */}
+      <div className='flex flex-row justify-between'>
+        <div className='flex flex-row m-4 '>
+        <p className='text-4xl m-2'><HiOutlineFolderOpen /></p>
+        <div className=''>
+          <h1 className='font-semibold text-xl ml-2 mt-2'>Default Project</h1>
+          <p className='font-base text-md ml-2 mb-1 mt-0 text-gray-600'>{noStryBoards} storyboard</p>
+        </div>
+
+          
+
+
+        </div>
+
+        <div className='flex flex-row m-4 '>
+          <p className='m-2'><SlOptionsVertical /></p>
+
+          <div className='m-2'>
+          <select className='w-5' >
+          <option value=""></option>
+          {allProjects.map((project, index) => (
+    <option key={index} value={project.name}>{project.name}</option>
+  ))}
+          </select>
+
+
+          </div>
+          
+        </div>
+
+      </div>
+      <div className="flex flex-wrap m-4">
         {allProjects.map((project, index) => (
           <div key={index} className="border border-gray-300 rounded-md p-4 mb-4 mr-4" style={{ flexBasis: 'calc(25% - 16px)' }}>
             <h3 className="text-xl font-bold mb-2">{project.name}</h3>
