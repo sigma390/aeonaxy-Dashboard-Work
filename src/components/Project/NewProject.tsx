@@ -49,7 +49,7 @@ const NewProject: React.FC<NewProjectProps> = ({ addProject, onClose }) => {
       
       <form onSubmit={handleSubmit}>
         <div className="mb-4">
-          <label htmlFor="name" className="block mb-2">Storyboard Name</label>
+          <label htmlFor="name" className="block mb-2 font-semibold">Storyboard Name</label>
           <input
             type="text"
             id="name"
@@ -62,13 +62,13 @@ const NewProject: React.FC<NewProjectProps> = ({ addProject, onClose }) => {
           />
         </div>
         <div className="mb-4">
-          <label htmlFor="frameSize" className="block mb-2">Frame Size</label>
+          <label htmlFor="frameSize" className="block mb-2 font-semibold">Frame Size</label>
           <select
             id="frameSize"
             name="frameSize"
             value={frameSize}
             onChange={(e) => setFrameSize(e.target.value)}
-            className="w-full border border-gray-300 rounded-md py-2 px-4 focus:outline-none focus:border-blue-500"
+            className="w-full font-semibold border border-gray-300 rounded-md py-2 px-4 focus:outline-none focus:border-blue-500"
           >
             <option value="small">Landscape (16:9)</option>
             <option value="medium">Portrait(9:16)</option>
