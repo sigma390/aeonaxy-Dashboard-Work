@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaPlus } from 'react-icons/fa';
+
 import { HiOutlineFolderOpen } from "react-icons/hi";
 import { SlOptionsVertical } from "react-icons/sl";
 import { ProjectCardProps } from './ProjectCard';
@@ -66,9 +66,9 @@ const ListProjects: React.FC<ListProjectsProps> = ({ projects }) => {
         </div>
 
       </div>
-      <div className="grid m-4 grid-cols-1 sm:grid-cols-3 lg:grid-cols-3 ">
+      <div className="grid m-4 grid-cols-1 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4  xl:grid-cols-5 ">
         {allProjects.map((project, index) => (
-          <div key={index} className="border border-gray-300 rounded-md p-4 mb-4 mr-4" style={{ flexBasis: 'calc(25% - 16px)' }}>
+          <div key={index} className="border border-gray-300 rounded-md p-4 mb-4 ml-3 mr-3" style={{ flexBasis: 'calc(25% - 16px)' }}>
             
             <img src={img} alt="" className='w-full' />
             <h5 className="text-lg font-semibold mt-2 mb-1">{project.name}</h5>

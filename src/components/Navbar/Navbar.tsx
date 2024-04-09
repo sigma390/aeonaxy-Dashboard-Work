@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { FaClock } from 'react-icons/fa';
 import Timer from '../Timer/Timer';
 
