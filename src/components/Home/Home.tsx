@@ -11,16 +11,16 @@ export type Project = {
 
 const Home: React.FC = () => {
   // State to manage projects
-  const [projects, setProjects] = useState<Project[]>([]);
+  const [projects] = useState<Project[]>([]);
 
   // State to indicate if we are adding a new project
-  const [addingProject, setAddingProject] = useState<boolean>(false);
+  // const [addingProject, setAddingProject] = useState<boolean>(false);
 
   // Function to add a new project
 
   // Function to handle click on square to add a project
   const handleClick = () => {
-    setAddingProject(true); // Set flag to indicate that we're adding a new project
+    // setAddingProject(true); // Set flag to indicate that we're adding a new project
   };
 
   return (

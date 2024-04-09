@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 const Timer = () => {
   const [time, setTime] = useState(300); // Initial time in seconds (5 minutes)

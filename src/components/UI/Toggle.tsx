@@ -1,12 +1,9 @@
-import React, { useState } from 'react';
+
 
 const DarkModeToggle = () => {
-  const [darkMode, setDarkMode] = useState(false);
 
-  const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
-    // Add logic to toggle dark mode here (e.g., toggle CSS classes, change theme, etc.)
-  };
+
+  
 
   return (
     <div className="flex items-center justify-center mt-8">
