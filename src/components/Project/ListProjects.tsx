@@ -66,13 +66,19 @@ const ListProjects: React.FC<ListProjectsProps> = ({ projects }) => {
         </div>
 
       </div>
-      <div className="grid m-4 grid-cols-1 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4  xl:grid-cols-5 ">
+      <div className="grid gap-4 m-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3  xl:grid-cols-5 ">
         {allProjects.map((project, index) => (
-          <div key={index} className="border border-gray-300 rounded-md p-4 mb-4 ml-3 mr-3" style={{ flexBasis: 'calc(25% - 16px)' }}>
-            
+          <div key={index} className="border  border-gray-300 rounded-md  mb-4 ml-3 mr-3" style={{ flexBasis: 'calc(25% - 16px)' }}>
+            <div className=''>
             <img src={img} alt="" className='w-full' />
+
+            </div>
+            <div className='p-4 h-auto'>
             <h5 className="text-lg font-semibold mt-2 mb-1">{project.name}</h5>
-            <p className='text-xs'>Updated {project.modified}</p>
+            <p className='text-sm'>Updated {project.modified}</p>
+
+            </div>
+            
             {/* Add more project details here if needed */}
           </div>
         ))}
