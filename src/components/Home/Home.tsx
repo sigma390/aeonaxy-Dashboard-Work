@@ -12,6 +12,7 @@ export type Project = {
 const Home: React.FC = () => {
   // State to manage projects
   const [projects] = useState<Project[]>([]);
+  const isSmallScreen = window.innerWidth <= 400; // Define a threshold for small screens
 
   // State to indicate if we are adding a new project
   // const [addingProject, setAddingProject] = useState<boolean>(false);
@@ -24,19 +25,51 @@ const Home: React.FC = () => {
   };
 
   return (
-    <div>
-      <div className='flex flex-row justify-between items-center'>
-        <div className='flex items-center'>
-          <div className="bg-[#f6c482] flex ml-10 mt-10 items-center hover:scale-105 duration-200 justify-center rounded-full h-8 w-8 border-2 border-black">
-            <div className='text-black font-bold m-2 text-xl'>A</div>
-          </div>
-          <h1 className='mr-2 mt-10 ml-2 text-lg sm:text-2xl md:text-2xl lg:text-2xl font-bold'>Adam Cooper Team</h1>
-        </div>
-        <button className='mr-10 mt-10 bg-black px-4 py-2 font-semibold text-white rounded-lg' onClick={handleClick}>New project</button>
+
+
+    <>
+    {
+      isSmallScreen?(
+        <div>
+  <div className='flex flex-row justify-between items-center'>
+    <div className='flex items-center'>
+      <div className="bg-[#f6c482] flex ml-8 mt-10 items-center hover:scale-105 duration-200 justify-center rounded-full h-8 w-8 border-2 border-black">
+        <div className='text-black font-bold m-2 text-xl'>A</div>
       </div>
-      {/* Render list of projects */}
-      <ListProjects projects={projects} />
+      <h1 className='mr-2 mt-10 ml-2 text-lg sm:text-2xl md:text-2xl lg:text-2xl font-bold'>Adam Cooper Team</h1>
     </div>
+    <button className='mr-6 mt-10 bg-black px-4 py-2 font-semibold text-white text-sm  rounded-lg' onClick={handleClick}>New project</button>
+  </div>
+  {/* Render list of projects */}
+  <ListProjects projects={projects} />
+</div>
+
+      )
+
+:
+<div>
+  <div className='flex flex-row justify-between items-center'>
+    <div className='flex items-center'>
+      <div className="bg-[#f6c482] flex ml-10 mt-10 items-center hover:scale-105 duration-200 justify-center rounded-full h-8 w-8 border-2 border-black">
+        <div className='text-black font-bold m-2 text-xl'>A</div>
+      </div>
+      <h1 className='mr-2 mt-10 ml-2 text-lg sm:text-2xl md:text-2xl lg:text-2xl font-bold'>Adam Cooper Team</h1>
+    </div>
+    <button className='mr-10 mt-10 bg-black px-4 py-2 font-semibold text-white rounded-lg' onClick={handleClick}>New project</button>
+  </div>
+  {/* Render list of projects */}
+  <ListProjects projects={projects} />
+</div>
+    }
+
+    
+    
+    
+
+    </>
+
+
+    
   );
 };
 

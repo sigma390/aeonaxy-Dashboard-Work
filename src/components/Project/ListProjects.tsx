@@ -34,13 +34,13 @@ const ListProjects: React.FC<ListProjectsProps> = ({ projects }) => {
   };
 
   return (
-    <div className='mr-10 ml-10 bg-white mt-10'>
+    <div className=' ml-2 mr-2   sm:mr-10 sm:ml-10 md:mr-10 md:ml-10 lg:mr-10 lg:ml-10 bg-white mt-10'>
       {/* <h2 className="text-2xl font-bold mb-4">List of Projects</h2> */}
       <div className='flex flex-row justify-between'>
         <div className='flex flex-row m-4 '>
         <p className='text-4xl m-2'><HiOutlineFolderOpen /></p>
         <div className=''>
-          <h1 className='font-semibold text-xl ml-2 mt-2'>Default Project</h1>
+          <h1 className='font-semibold text-lg sm:text-xl  md:text-xl  lg:text-xl ml-2 mt-2'>Default Project</h1>
           <p className='font-base text-md ml-2 mb-1 mt-0 text-gray-600'>{noStryBoards} storyboard</p>
         </div>
 
@@ -66,7 +66,7 @@ const ListProjects: React.FC<ListProjectsProps> = ({ projects }) => {
         </div>
 
       </div>
-      <div className="grid gap-4 m-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3  xl:grid-cols-5 ">
+      <div className="grid gap-4 m-1 sm:m-4 md:m-4 lg:m-4 xl:m-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3  xl:grid-cols-5 ">
         {allProjects.map((project, index) => (
           <div key={index} className="border  border-gray-300 rounded-md  mb-4 ml-3 mr-3" style={{ flexBasis: 'calc(25% - 16px)' }}>
             <div className=''>
