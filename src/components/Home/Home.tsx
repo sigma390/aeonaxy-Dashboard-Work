@@ -17,10 +17,6 @@ const Home: React.FC = () => {
   const [addingProject, setAddingProject] = useState<boolean>(false);
 
   // Function to add a new project
-  const addProject = (newProject: Project) => {
-    setProjects([...projects, newProject]);
-    setAddingProject(false); // Set addingProject flag to false after adding the project
-  };
 
   // Function to handle click on square to add a project
   const handleClick = () => {

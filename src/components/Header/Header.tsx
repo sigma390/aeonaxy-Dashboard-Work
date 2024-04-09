@@ -9,8 +9,8 @@ const Header = () => {
   return (
     <div className='flex justify-between items-center h-24 bg-white'>
       <div className='flex items-center'>
-        <div className="bg-black flex items-center justify-center rounded-full w-10 h-10 sm:w-10 sm:h-10 md:w-12 md:h-12 mb-3 sm:mb-0 md:mb-0 lg:mb-0 mt-6 ml-6">
-          <div className='text-white font-bold text-sm sm:text-xl md:text-2xl'>B</div>
+        <div className="bg-black flex items-center justify-center rounded-full w-10 h-10 sm:w-10 sm:h-10 md:w-12 md:h-12 mb-3 sm:mb-3 md:mb-3 lg:mb-3 mt-6 ml-6">
+          <div className='text-white font-custom text-sm sm:text-xl md:text-2xl'>B</div>
         </div>
         <div className="mt-6 p-2 mb-3 ml-3 items-center">
           <p className='text-2xl sm:text-2xl md:text-3xl font-custom'>Project Dashboard </p>
