@@ -14,6 +14,30 @@ const NewProject: React.FC<NewProjectProps> = ({ addProject, onClose }) => {
   const [frameSize, setFrameSize] = useState('small'); // Default frame size
 
 
+    //date thing
+    const currentDate = new Date();
+
+// Get day, month, and year
+const day = currentDate.getDate();
+const monthIndex = currentDate.getMonth();
+const year = currentDate.getFullYear();
+
+// Array of month names
+const monthNames = [
+  'January', 'February', 'March', 'April', 'May', 'June',
+  'July', 'August', 'September', 'October', 'November', 'December'
+];
+
+// Get the month name from the array using the month index
+const month = monthNames[monthIndex];
+
+// Format the date string
+const formattedDate = `${day} ${month} ${year}`;
+
+console.log(formattedDate);
+
+
+
   //function to close 
   function closeIt(){
     onClose();
@@ -26,10 +50,10 @@ const NewProject: React.FC<NewProjectProps> = ({ addProject, onClose }) => {
 
     // Create a new project object
     const newProject: Project = {
-      image: '', // Add image path if required
+      image: '../../assets/1.jpg', // Add image path if required
       name,
       id: Date.now(), // Generate unique ID for the project
-      modified: new Date().toISOString(), // Store current date as modified date
+      modified: formattedDate, // Store current date as modified date
     };
 
     // Call addProject function from props to add the new project

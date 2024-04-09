@@ -5,7 +5,7 @@ import { SlOptionsVertical } from "react-icons/sl";
 import { ProjectCardProps } from './ProjectCard';
 import NewProject from './NewProject';
 import AddProjectSquare from './AddProjectSquare';
-
+import img from '../../assets/1.jpg'
 type ListProjectsProps = {
   projects: ProjectCardProps[]; // Array of projects
 };
@@ -66,12 +66,13 @@ const ListProjects: React.FC<ListProjectsProps> = ({ projects }) => {
         </div>
 
       </div>
-      <div className="flex flex-wrap m-4">
+      <div className="grid m-4 grid-cols-1 sm:grid-cols-3 lg:grid-cols-3 ">
         {allProjects.map((project, index) => (
           <div key={index} className="border border-gray-300 rounded-md p-4 mb-4 mr-4" style={{ flexBasis: 'calc(25% - 16px)' }}>
-            <h3 className="text-xl font-bold mb-2">{project.name}</h3>
-            <p>ID: {project.id}</p>
-            <p>Last Modified: {project.modified}</p>
+            
+            <img src={img} alt="" className='w-full' />
+            <h5 className="text-lg font-semibold mt-2 mb-1">{project.name}</h5>
+            <p className='text-xs'>Updated {project.modified}</p>
             {/* Add more project details here if needed */}
           </div>
         ))}
