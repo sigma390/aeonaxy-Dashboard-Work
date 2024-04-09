@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import ListProjects from '../Project/ListProjects';
-import NewProject from '../Project/NewProject';
+
 
 // Define the type for the project
 export type Project = {
@@ -31,8 +31,16 @@ const Home: React.FC = () => {
   return (
     <div className=''>
       <div className='flex flex-row justify-between'>
-        <h1>Adam cooper team</h1>
-        <button onClick={handleClick}>New project</button>
+        <div className='flex flex-start'>
+        <div className="bg-[#f6c482] flex  ml-10  mt-10 items-center hover:scale-105 duration-200 justify-center rounded-full  h-8 w-8 border-2 border-black   ">
+            <div className='text-black font-bold m-2 text-xl '>A</div>
+        </div>
+        <h1 className='mr-10 ml-2 mt-10 text-2xl font-bold '>Adam Cooper Team</h1>
+
+        </div>
+     
+       
+        <button className='mr-10 mt-10 bg-black pl-3 pr-3 pt-2 pb-2 font-semibold text-white rounded-lg' onClick={handleClick}>New project</button>
         
         </div>
       {/* Render list of projects */}
